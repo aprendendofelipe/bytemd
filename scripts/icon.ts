@@ -30,6 +30,7 @@ const meta: Record<string, (keyof typeof icons)[]> = {
     'OffScreen',
     'FullScreen',
     'GithubOne',
+    'Close',
   ],
   'plugin-gfm/src': ['Strikethrough', 'CheckCorrect', 'InsertTable'],
   'plugin-math/src/utils': ['Formula', 'Inline', 'Block'],
