@@ -402,6 +402,7 @@
     </div>
     <div class="bytemd-sidebar" class:bytemd-hidden={sidebar === false}>
       <div
+        role={'button'}
         class="bytemd-sidebar-close"
         on:click={() => {
           sidebar = false

@@ -240,7 +240,12 @@
   }
 </script>
 
-<div class="bytemd-toolbar" bind:this={toolbar} on:click={handleClick}>
+<div
+  role={'button'}
+  class="bytemd-toolbar"
+  bind:this={toolbar}
+  on:click={handleClick}
+>
   <div class="bytemd-toolbar-left">
     {#if split}
       {#each actions as item, index}
@@ -255,6 +260,7 @@
       {/each}
     {:else}
       <div
+        role={'button'}
         on:click={() => dispatch('tab', 'write')}
         class="bytemd-toolbar-tab"
         class:bytemd-toolbar-tab-active={activeTab !== 'preview'}
@@ -262,6 +268,7 @@
         {locale.write}
       </div>
       <div
+        role={'button'}
         on:click={() => dispatch('tab', 'preview')}
         class="bytemd-toolbar-tab"
         class:bytemd-toolbar-tab-active={activeTab === 'preview'}

@@ -60,6 +60,7 @@
         class:bytemd-toc-active={currentHeadingIndex === index}
         class:bytemd-toc-first={item.level === minLevel}
         style={`padding-left:${(item.level - minLevel) * 16 + 8}px`}
+        role={'button'}
         on:click={() => {
           dispatch('click', index)
         }}
