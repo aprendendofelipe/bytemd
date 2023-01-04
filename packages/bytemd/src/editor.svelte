@@ -10,7 +10,7 @@
     handleImageUpload,
   } from './editor'
   import Help from './help.svelte'
-  import * as icons from './icons'
+  import { icons } from './icons'
   import Status from './status.svelte'
   import Toc from './toc.svelte'
   import Toolbar from './toolbar.svelte'
@@ -402,12 +402,13 @@
     </div>
     <div class="bytemd-sidebar" class:bytemd-hidden={sidebar === false}>
       <div
+        role={'button'}
         class="bytemd-sidebar-close"
         on:click={() => {
           sidebar = false
         }}
       >
-        {@html icons.Close({})}
+        {@html icons.Close}
       </div>
       <Help
         locale={mergedLocale}

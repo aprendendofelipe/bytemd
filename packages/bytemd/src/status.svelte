@@ -40,6 +40,6 @@
         {locale.sync}
       </label>
     {/if}
-    <span on:click={() => dispatch('top')}>{locale.top}</span>
+    <span role={'button'} on:click={() => dispatch('top')}>{locale.top}</span>
   </div>
 </div>

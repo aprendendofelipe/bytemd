@@ -20,16 +20,17 @@ export function getProcessor({
   remarkRehype: remarkRehypeOptions = {},
 }: Omit<ViewerProps, 'value'>) {
   let processor: Processor = unified().use(remarkParse)
+  let schema = JSON.parse(schemaStr) as Schema
 
-  plugins?.forEach(({ remark }) => {
+  plugins?.forEach(({ remark, sanitize }) => {
     if (remark) processor = remark(processor)
+    if (typeof sanitize === 'function') {
+      schema = sanitize(schema)
+    }
   })
   processor = processor
     .use(remarkRehype, { allowDangerousHtml: true, ...remarkRehypeOptions })
     .use(rehypeRaw)
-
-  let schema = JSON.parse(schemaStr) as Schema
-  schema.attributes!['*'].push('className') // Allow class names by default
 
   if (typeof sanitize === 'function') {
     schema = sanitize(schema)

@@ -163,6 +163,12 @@ export interface BytemdPlugin {
    * Side effect for the viewer, triggers when viewer props changes
    */
   viewerEffect?(ctx: BytemdViewerContext): void | (() => void)
+  /**
+   * Customize sanitize strategy
+   *
+   * https://github.com/syntax-tree/hast-util-sanitize/blob/main/lib/github.json
+   */
+  sanitize?: (schema: Schema) => Schema
 }
 
 export interface EditorProps extends ViewerProps {
@@ -226,7 +232,7 @@ export interface ViewerProps {
    */
   plugins?: BytemdPlugin[]
   /**
-   * Sanitize strategy: Defaults to GitHub style sanitation with class names allowed
+   * Sanitize strategy: Defaults to GitHub style sanitation
    *
    * https://github.com/syntax-tree/hast-util-sanitize/blob/main/lib/github.json
    *

@@ -4,7 +4,7 @@
   import frontmatter from '@bytemd/plugin-frontmatter'
   import gemoji from '@bytemd/plugin-gemoji'
   import gfm from '@bytemd/plugin-gfm'
-  import highlight from '@bytemd/plugin-highlight'
+  import highlight from '@bytemd/plugin-highlight-ssr'
   import math from '@bytemd/plugin-math'
   import mediumZoom from '@bytemd/plugin-medium-zoom'
   import mermaid from '@bytemd/plugin-mermaid'
