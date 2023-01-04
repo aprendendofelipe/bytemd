@@ -75,7 +75,7 @@ importers:
       '@types/lodash-es': ^4.17.6
       '@types/mdast': ^3.0.10
       codemirror-ssr: ^0.65.0
-      hast-util-sanitize: ^4.0.0
+      hast-util-sanitize: ^4.1.0
       lodash-es: ^4.17.21
       rehype-raw: ^6.1.1
       rehype-sanitize: ^5.0.1
@@ -95,7 +95,7 @@ importers:
       '@types/lodash-es': 4.17.6
       '@types/mdast': 3.0.10
       codemirror-ssr: 0.65.0_@types+codemirror@5.60.5
-      hast-util-sanitize: 4.0.0
+      hast-util-sanitize: 4.1.0
       lodash-es: 4.17.21
       rehype-raw: 6.1.1
       rehype-sanitize: 5.0.1
@@ -5975,8 +5975,8 @@ packages:
       zwitch: 2.0.2
     dev: false
 
-  /hast-util-sanitize/4.0.0:
-    resolution: {integrity: sha512-pw56+69jq+QSr/coADNvWTmBPDy+XsmwaF5KnUys4/wM1jt/fZdl7GPxhXXXYdXnz3Gj3qMkbUCH2uKjvX0MgQ==}
+  /hast-util-sanitize/4.1.0:
+    resolution: {integrity: sha512-Hd9tU0ltknMGRDv+d6Ro/4XKzBqQnP/EZrpiTbpFYfXv/uOhWeKc+2uajcbEvAEH98VZd7eII2PiXm13RihnLw==}
     dependencies:
       '@types/hast': 2.3.4
     dev: false
@@ -8617,7 +8617,7 @@ packages:
     resolution: {integrity: sha512-da/jIOjq8eYt/1r9GN6GwxIR3gde7OZ+WV8pheu1tL8K0D9KxM2AyMh+UEfke+FfdM3PvGHeYJU0Td5OWa7L5A==}
     dependencies:
       '@types/hast': 2.3.4
-      hast-util-sanitize: 4.0.0
+      hast-util-sanitize: 4.1.0
       unified: 10.1.2
     dev: false
 
