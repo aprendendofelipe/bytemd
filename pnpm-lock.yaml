@@ -165,8 +165,10 @@ importers:
   packages/plugin-highlight-ssr:
     specifiers:
       bytemd: workspace:*
+      deepmerge: ^4.2.2
       rehype-highlight: ^5.0.2
     dependencies:
+      deepmerge: 4.2.2
       rehype-highlight: 5.0.2
     devDependencies:
       bytemd: link:../bytemd
